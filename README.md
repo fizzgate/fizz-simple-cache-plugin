@@ -1,0 +1,1 @@
+# fizz-simple-cache-plugin

@@ -364,8 +364,15 @@ public class PathCacheFilter implements FizzPluginFilter {
 			// 重定义写入方法，获取原始响应内容
 			@Override
 			public Mono<Void> writeWith(Publisher<? extends DataBuffer> body) {
-				if (body instanceof Flux) {
-					Flux<? extends DataBuffer> fluxBody = (Flux<? extends DataBuffer>) body;
+				if (body instanceof Mono || body instanceof Flux) {
+					
+					Flux<? extends DataBuffer> fluxBody = null;
+					if (body instanceof Mono) {
+						fluxBody = ((Mono<? extends DataBuffer>) body).flux();
+					} else {
+						fluxBody = (Flux<? extends DataBuffer>) body;
+					}
+					
 					return super.writeWith(fluxBody.map(dataBuffer -> {
 						// 以数据缓冲区的可读取字节数，创建缓冲数组，保存原始响应内容
 						byte[] originalContent = new byte[dataBuffer.readableByteCount()];

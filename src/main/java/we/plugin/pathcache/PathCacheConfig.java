@@ -15,7 +15,7 @@ import we.plugin.requestbody.RequestBodyPlugin;
  * 定义 DemoApiConfig 继承 ManualApiConfig，并注解为 Configuration，然后实现 setApiConfigs
  * 方法，在方法中添加路由配置； 本类仅为方便开发和测试，正式环境应该通过管理后台配置路由
  */
-@Configuration
+// @Configuration
 public class PathCacheConfig extends ManualApiConfig {
 
 	@Override

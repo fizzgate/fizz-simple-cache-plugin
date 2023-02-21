@@ -12,6 +12,6 @@
         <Root level="error">
             <AppenderRef ref="Console"/>
         </Root>
-        <Logger name="we" level="error"/>
+        <Logger name="com.fizzgate" level="error"/>
     </Loggers>
 </Configuration>

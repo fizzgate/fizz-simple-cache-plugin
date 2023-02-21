@@ -6,10 +6,10 @@ import java.util.List;
 
 import org.springframework.context.annotation.Configuration;
 
-import we.config.ManualApiConfig;
-import we.plugin.PluginConfig;
-import we.plugin.auth.ApiConfig;
-import we.plugin.requestbody.RequestBodyPlugin;
+import com.fizzgate.config.ManualApiConfig;
+import com.fizzgate.plugin.PluginConfig;
+import com.fizzgate.plugin.auth.ApiConfig;
+import com.fizzgate.plugin.requestbody.RequestBodyPlugin;
 
 /**
  * 定义 DemoApiConfig 继承 ManualApiConfig，并注解为 Configuration，然后实现 setApiConfigs

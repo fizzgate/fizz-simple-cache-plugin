@@ -13,7 +13,7 @@
 
 
 ## 配置说明
-gateway项目pom文件中引入以下依赖
+gateway的fizz-bootstrap项目pom文件中引入以下依赖
 ```
         <dependency>
                 <groupId>com.fizzgate</groupId>

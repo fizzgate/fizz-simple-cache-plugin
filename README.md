@@ -18,7 +18,7 @@ gateway项目pom文件中引入以下依赖
         <dependency>
                 <groupId>com.fizzgate</groupId>
                 <artifactId>fizz-simple-cache-plugin</artifactId>
-                <version>1.0</version>
+                <version>2.7.1</version>
         </dependency>   
 ```
        
